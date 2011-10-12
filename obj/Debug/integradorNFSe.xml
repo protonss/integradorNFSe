@@ -1,0 +1,278 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+integradorNFSe
+</name>
+</assembly>
+<members>
+<member name="M:integradorNFSe.integradorNFSe.ConfigProxy(System.String,System.Int32,System.String,System.String)">
+	<summary> 
+ Configuração de acesso a internet para redes com proxy
+ Linguagem: VB.NET 
+ Framework: 2.0 
+ </summary>
+	<param name="servidor"> IP do servidor de acesso a internet </param>
+	<param name="porta"> Porta do servidor de acesso a internet </param>
+	<param name="usuario"> Usuário do proxy </param>
+	<param name="senha"> Senha do usuário do proxy </param>
+</member><member name="M:integradorNFSe.integradorNFSe.AssinarElementosXML(System.Xml.XmlDocument,System.String,System.String,System.String)">
+	<summary> 
+ Assina os elementos de um documento XML com um certificado digital. 
+ Linguagem: VB.NET 
+ Framework: 2.0 
+ </summary>
+	<param name="xml"> O documento que contem os elementos que devem ser assinados </param>
+	<param name="ParentElementName">O elemento que contem as tags a serem assinadas 
+ Ex.:  
+ Para assinar o rps em um lote o ParentElementName = "RPS" 
+ Para assinar o pedido do lote de rps o ParentElementName = "ns1:ReqEnvioLoteRPS" 
+ </param>
+	<param name="ElementName">O elemento (tag) que será assinado 
+ Ex.:  
+ Para assinar o rps em um lote o ElementName = "InfRps" 
+ ''' Para assinar o pedido do lote de rps o ElementName = "Lote" 
+ </param>
+	<param name="AttributeName"> 
+ O nome do atributo do elemento que será assinado 
+ Obs.: 
+ Por padrão o NOME do atributo possui a mesma identificação. 
+ AtributeName = "Id" 
+ </param>
+</member><member name="M:integradorNFSe.integradorNFSe.GeraAssinaturaHash(System.String)">
+	<summary> 
+ Retorna assinatura padrão SHA1 de acordo com o parâmetro passado baseado em certificado digital.
+ Linguagem: VB.NET 
+ Framework: 2.0 
+ </summary>
+	<param name="stringAssinatura"> String de dados concatenados para assinatura da tag RPS</param>
+</member><member name="M:integradorNFSe.integradorNFSe.Cancelar(System.String,System.String,System.String,System.String,System.String,System.String)">
+	<summary> 
+ Cancela o documento XML
+ Linguagem: VB.NET 
+ Framework: 2.0 
+ </summary>
+	<param name="CodCidade">Código da cidade da declaração padrão SIAFI.</param>
+	<param name="CPFCNPJRemetente">CPF /CNPJ do remetente autorizado a transmitir o Comum.RPS</param>
+	<param name="InscricaoMunicipalPrestador">Inscrição Municipal do Prestador</param>
+	<param name="NumeroNota">Número da Nota Fiscal</param>
+	<param name="CodigoVerificacao">Código de Verificação Indentificador da NFSe</param>
+	<param name="MotivoCancelamento">Motivo do cancelamento</param>
+</member><member name="M:integradorNFSe.integradorNFSe.EnviarXml(System.String,System.String)">
+	<summary> 
+ Envia o documento XML
+ Linguagem: VB.NET 
+ Framework: 2.0 
+ </summary>
+	<param name="Xml">Documento XML</param>
+	<param name="Assinatura">Preencha com "S" para enviar o XML Assinado</param>
+</member><member name="M:integradorNFSe.integradorNFSe.Enviar(System.String)">
+	<summary> 
+ Envia o documento XML
+ Linguagem: VB.NET 
+ Framework: 2.0 
+ </summary>
+	<param name="Assinatura">Preencha com "S" para enviar o XML Assinado</param>
+</member><member name="M:integradorNFSe.integradorNFSe.ConsultarLote(System.String,System.String,System.String)">
+	<summary> 
+ Consulta de Lote
+ Linguagem: VB.NET 
+ Framework: 2.0 
+ </summary>
+	<param name="numeroLote">Número do Lote</param>
+</member><member name="P:integradorNFSe.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:integradorNFSe.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:integradorNFSe.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="M:integradorNFSe.LoteRpsServiceProd.LoteRpsService.#ctor">
+	<remarks/>
+</member><member name="E:integradorNFSe.LoteRpsServiceProd.LoteRpsService.consultarSequencialRpsCompleted">
+	<remarks/>
+</member><member name="E:integradorNFSe.LoteRpsServiceProd.LoteRpsService.enviarCompleted">
+	<remarks/>
+</member><member name="E:integradorNFSe.LoteRpsServiceProd.LoteRpsService.consultarLoteCompleted">
+	<remarks/>
+</member><member name="E:integradorNFSe.LoteRpsServiceProd.LoteRpsService.consultarNotaCompleted">
+	<remarks/>
+</member><member name="E:integradorNFSe.LoteRpsServiceProd.LoteRpsService.cancelarCompleted">
+	<remarks/>
+</member><member name="E:integradorNFSe.LoteRpsServiceProd.LoteRpsService.consultarNFSeRpsCompleted">
+	<remarks/>
+</member><member name="M:integradorNFSe.LoteRpsServiceProd.LoteRpsService.consultarSequencialRps(System.String)">
+	<remarks/>
+</member><member name="M:integradorNFSe.LoteRpsServiceProd.LoteRpsService.consultarSequencialRpsAsync(System.String)">
+	<remarks/>
+</member><member name="M:integradorNFSe.LoteRpsServiceProd.LoteRpsService.consultarSequencialRpsAsync(System.String,System.Object)">
+	<remarks/>
+</member><member name="M:integradorNFSe.LoteRpsServiceProd.LoteRpsService.enviar(System.String)">
+	<remarks/>
+</member><member name="M:integradorNFSe.LoteRpsServiceProd.LoteRpsService.enviarAsync(System.String)">
+	<remarks/>
+</member><member name="M:integradorNFSe.LoteRpsServiceProd.LoteRpsService.enviarAsync(System.String,System.Object)">
+	<remarks/>
+</member><member name="M:integradorNFSe.LoteRpsServiceProd.LoteRpsService.consultarLote(System.String)">
+	<remarks/>
+</member><member name="M:integradorNFSe.LoteRpsServiceProd.LoteRpsService.consultarLoteAsync(System.String)">
+	<remarks/>
+</member><member name="M:integradorNFSe.LoteRpsServiceProd.LoteRpsService.consultarLoteAsync(System.String,System.Object)">
+	<remarks/>
+</member><member name="M:integradorNFSe.LoteRpsServiceProd.LoteRpsService.consultarNota(System.String)">
+	<remarks/>
+</member><member name="M:integradorNFSe.LoteRpsServiceProd.LoteRpsService.consultarNotaAsync(System.String)">
+	<remarks/>
+</member><member name="M:integradorNFSe.LoteRpsServiceProd.LoteRpsService.consultarNotaAsync(System.String,System.Object)">
+	<remarks/>
+</member><member name="M:integradorNFSe.LoteRpsServiceProd.LoteRpsService.cancelar(System.String)">
+	<remarks/>
+</member><member name="M:integradorNFSe.LoteRpsServiceProd.LoteRpsService.cancelarAsync(System.String)">
+	<remarks/>
+</member><member name="M:integradorNFSe.LoteRpsServiceProd.LoteRpsService.cancelarAsync(System.String,System.Object)">
+	<remarks/>
+</member><member name="M:integradorNFSe.LoteRpsServiceProd.LoteRpsService.consultarNFSeRps(System.String)">
+	<remarks/>
+</member><member name="M:integradorNFSe.LoteRpsServiceProd.LoteRpsService.consultarNFSeRpsAsync(System.String)">
+	<remarks/>
+</member><member name="M:integradorNFSe.LoteRpsServiceProd.LoteRpsService.consultarNFSeRpsAsync(System.String,System.Object)">
+	<remarks/>
+</member><member name="M:integradorNFSe.LoteRpsServiceProd.LoteRpsService.CancelAsync(System.Object)">
+	<remarks/>
+</member><member name="T:integradorNFSe.LoteRpsServiceProd.LoteRpsService">
+	<remarks/>
+</member><member name="T:integradorNFSe.LoteRpsServiceProd.consultarSequencialRpsCompletedEventHandler">
+	<remarks/>
+</member><member name="P:integradorNFSe.LoteRpsServiceProd.consultarSequencialRpsCompletedEventArgs.Result">
+	<remarks/>
+</member><member name="T:integradorNFSe.LoteRpsServiceProd.consultarSequencialRpsCompletedEventArgs">
+	<remarks/>
+</member><member name="T:integradorNFSe.LoteRpsServiceProd.enviarCompletedEventHandler">
+	<remarks/>
+</member><member name="P:integradorNFSe.LoteRpsServiceProd.enviarCompletedEventArgs.Result">
+	<remarks/>
+</member><member name="T:integradorNFSe.LoteRpsServiceProd.enviarCompletedEventArgs">
+	<remarks/>
+</member><member name="T:integradorNFSe.LoteRpsServiceProd.consultarLoteCompletedEventHandler">
+	<remarks/>
+</member><member name="P:integradorNFSe.LoteRpsServiceProd.consultarLoteCompletedEventArgs.Result">
+	<remarks/>
+</member><member name="T:integradorNFSe.LoteRpsServiceProd.consultarLoteCompletedEventArgs">
+	<remarks/>
+</member><member name="T:integradorNFSe.LoteRpsServiceProd.consultarNotaCompletedEventHandler">
+	<remarks/>
+</member><member name="P:integradorNFSe.LoteRpsServiceProd.consultarNotaCompletedEventArgs.Result">
+	<remarks/>
+</member><member name="T:integradorNFSe.LoteRpsServiceProd.consultarNotaCompletedEventArgs">
+	<remarks/>
+</member><member name="T:integradorNFSe.LoteRpsServiceProd.cancelarCompletedEventHandler">
+	<remarks/>
+</member><member name="P:integradorNFSe.LoteRpsServiceProd.cancelarCompletedEventArgs.Result">
+	<remarks/>
+</member><member name="T:integradorNFSe.LoteRpsServiceProd.cancelarCompletedEventArgs">
+	<remarks/>
+</member><member name="T:integradorNFSe.LoteRpsServiceProd.consultarNFSeRpsCompletedEventHandler">
+	<remarks/>
+</member><member name="P:integradorNFSe.LoteRpsServiceProd.consultarNFSeRpsCompletedEventArgs.Result">
+	<remarks/>
+</member><member name="T:integradorNFSe.LoteRpsServiceProd.consultarNFSeRpsCompletedEventArgs">
+	<remarks/>
+</member><member name="M:integradorNFSe.LoteRpsServiceHomol.LoteRpsService.#ctor">
+	<remarks/>
+</member><member name="E:integradorNFSe.LoteRpsServiceHomol.LoteRpsService.consultarSequencialRpsCompleted">
+	<remarks/>
+</member><member name="E:integradorNFSe.LoteRpsServiceHomol.LoteRpsService.enviarCompleted">
+	<remarks/>
+</member><member name="E:integradorNFSe.LoteRpsServiceHomol.LoteRpsService.consultarLoteCompleted">
+	<remarks/>
+</member><member name="E:integradorNFSe.LoteRpsServiceHomol.LoteRpsService.consultarNotaCompleted">
+	<remarks/>
+</member><member name="E:integradorNFSe.LoteRpsServiceHomol.LoteRpsService.cancelarCompleted">
+	<remarks/>
+</member><member name="E:integradorNFSe.LoteRpsServiceHomol.LoteRpsService.consultarNFSeRpsCompleted">
+	<remarks/>
+</member><member name="M:integradorNFSe.LoteRpsServiceHomol.LoteRpsService.consultarSequencialRps(System.String)">
+	<remarks/>
+</member><member name="M:integradorNFSe.LoteRpsServiceHomol.LoteRpsService.consultarSequencialRpsAsync(System.String)">
+	<remarks/>
+</member><member name="M:integradorNFSe.LoteRpsServiceHomol.LoteRpsService.consultarSequencialRpsAsync(System.String,System.Object)">
+	<remarks/>
+</member><member name="M:integradorNFSe.LoteRpsServiceHomol.LoteRpsService.enviar(System.String)">
+	<remarks/>
+</member><member name="M:integradorNFSe.LoteRpsServiceHomol.LoteRpsService.enviarAsync(System.String)">
+	<remarks/>
+</member><member name="M:integradorNFSe.LoteRpsServiceHomol.LoteRpsService.enviarAsync(System.String,System.Object)">
+	<remarks/>
+</member><member name="M:integradorNFSe.LoteRpsServiceHomol.LoteRpsService.consultarLote(System.String)">
+	<remarks/>
+</member><member name="M:integradorNFSe.LoteRpsServiceHomol.LoteRpsService.consultarLoteAsync(System.String)">
+	<remarks/>
+</member><member name="M:integradorNFSe.LoteRpsServiceHomol.LoteRpsService.consultarLoteAsync(System.String,System.Object)">
+	<remarks/>
+</member><member name="M:integradorNFSe.LoteRpsServiceHomol.LoteRpsService.consultarNota(System.String)">
+	<remarks/>
+</member><member name="M:integradorNFSe.LoteRpsServiceHomol.LoteRpsService.consultarNotaAsync(System.String)">
+	<remarks/>
+</member><member name="M:integradorNFSe.LoteRpsServiceHomol.LoteRpsService.consultarNotaAsync(System.String,System.Object)">
+	<remarks/>
+</member><member name="M:integradorNFSe.LoteRpsServiceHomol.LoteRpsService.cancelar(System.String)">
+	<remarks/>
+</member><member name="M:integradorNFSe.LoteRpsServiceHomol.LoteRpsService.cancelarAsync(System.String)">
+	<remarks/>
+</member><member name="M:integradorNFSe.LoteRpsServiceHomol.LoteRpsService.cancelarAsync(System.String,System.Object)">
+	<remarks/>
+</member><member name="M:integradorNFSe.LoteRpsServiceHomol.LoteRpsService.consultarNFSeRps(System.String)">
+	<remarks/>
+</member><member name="M:integradorNFSe.LoteRpsServiceHomol.LoteRpsService.consultarNFSeRpsAsync(System.String)">
+	<remarks/>
+</member><member name="M:integradorNFSe.LoteRpsServiceHomol.LoteRpsService.consultarNFSeRpsAsync(System.String,System.Object)">
+	<remarks/>
+</member><member name="M:integradorNFSe.LoteRpsServiceHomol.LoteRpsService.CancelAsync(System.Object)">
+	<remarks/>
+</member><member name="T:integradorNFSe.LoteRpsServiceHomol.LoteRpsService">
+	<remarks/>
+</member><member name="T:integradorNFSe.LoteRpsServiceHomol.consultarSequencialRpsCompletedEventHandler">
+	<remarks/>
+</member><member name="P:integradorNFSe.LoteRpsServiceHomol.consultarSequencialRpsCompletedEventArgs.Result">
+	<remarks/>
+</member><member name="T:integradorNFSe.LoteRpsServiceHomol.consultarSequencialRpsCompletedEventArgs">
+	<remarks/>
+</member><member name="T:integradorNFSe.LoteRpsServiceHomol.enviarCompletedEventHandler">
+	<remarks/>
+</member><member name="P:integradorNFSe.LoteRpsServiceHomol.enviarCompletedEventArgs.Result">
+	<remarks/>
+</member><member name="T:integradorNFSe.LoteRpsServiceHomol.enviarCompletedEventArgs">
+	<remarks/>
+</member><member name="T:integradorNFSe.LoteRpsServiceHomol.consultarLoteCompletedEventHandler">
+	<remarks/>
+</member><member name="P:integradorNFSe.LoteRpsServiceHomol.consultarLoteCompletedEventArgs.Result">
+	<remarks/>
+</member><member name="T:integradorNFSe.LoteRpsServiceHomol.consultarLoteCompletedEventArgs">
+	<remarks/>
+</member><member name="T:integradorNFSe.LoteRpsServiceHomol.consultarNotaCompletedEventHandler">
+	<remarks/>
+</member><member name="P:integradorNFSe.LoteRpsServiceHomol.consultarNotaCompletedEventArgs.Result">
+	<remarks/>
+</member><member name="T:integradorNFSe.LoteRpsServiceHomol.consultarNotaCompletedEventArgs">
+	<remarks/>
+</member><member name="T:integradorNFSe.LoteRpsServiceHomol.cancelarCompletedEventHandler">
+	<remarks/>
+</member><member name="P:integradorNFSe.LoteRpsServiceHomol.cancelarCompletedEventArgs.Result">
+	<remarks/>
+</member><member name="T:integradorNFSe.LoteRpsServiceHomol.cancelarCompletedEventArgs">
+	<remarks/>
+</member><member name="T:integradorNFSe.LoteRpsServiceHomol.consultarNFSeRpsCompletedEventHandler">
+	<remarks/>
+</member><member name="P:integradorNFSe.LoteRpsServiceHomol.consultarNFSeRpsCompletedEventArgs.Result">
+	<remarks/>
+</member><member name="T:integradorNFSe.LoteRpsServiceHomol.consultarNFSeRpsCompletedEventArgs">
+	<remarks/>
+</member>
+</members>
+</doc>

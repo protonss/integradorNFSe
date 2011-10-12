@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="My" GeneratedClassName="MySettings" UseMySettingsClassName="true">
+  <Profiles />
+  <Settings>
+    <Setting Name="integradorNFS_LoteRpsServiceHomol_LoteRpsService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://200.201.194.78/WsNFe2/LoteRps.jws</Value>
+    </Setting>
+    <Setting Name="integradorNFSe_LoteRpsServiceProd_LoteRpsService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://www.issdigitalsod.com.br/WsNFe2/LoteRps.jws</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

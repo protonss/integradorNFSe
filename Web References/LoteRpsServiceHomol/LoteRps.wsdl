@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:intf="http://200.201.194.78/WsNFe2/LoteRps.jws" xmlns:impl="http://200.201.194.78/WsNFe2/LoteRps.jws" targetNamespace="http://200.201.194.78/WsNFe2/LoteRps.jws" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types />
+  <wsdl:message name="consultarNotaResponse">
+    <wsdl:part name="consultarNotaReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="consultarSequencialRpsRequest">
+    <wsdl:part name="mensagemXml" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="consultarSequencialRpsResponse">
+    <wsdl:part name="consultarSequencialRpsReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="cancelarResponse">
+    <wsdl:part name="cancelarReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="enviarRequest">
+    <wsdl:part name="mensagemXml" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="consultarNFSeRpsResponse">
+    <wsdl:part name="consultarNFSeRpsReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="consultarNFSeRpsRequest">
+    <wsdl:part name="mensagemXml" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="cancelarRequest">
+    <wsdl:part name="mensagemXml" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="consultarNotaRequest">
+    <wsdl:part name="mensagemXml" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="consultarLoteRequest">
+    <wsdl:part name="mensagemXml" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="consultarLoteResponse">
+    <wsdl:part name="consultarLoteReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="enviarResponse">
+    <wsdl:part name="enviarReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:portType name="LoteRps">
+    <wsdl:operation name="consultarSequencialRps" parameterOrder="mensagemXml">
+      <wsdl:input name="consultarSequencialRpsRequest" message="impl:consultarSequencialRpsRequest" />
+      <wsdl:output name="consultarSequencialRpsResponse" message="impl:consultarSequencialRpsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="enviar" parameterOrder="mensagemXml">
+      <wsdl:input name="enviarRequest" message="impl:enviarRequest" />
+      <wsdl:output name="enviarResponse" message="impl:enviarResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="consultarLote" parameterOrder="mensagemXml">
+      <wsdl:input name="consultarLoteRequest" message="impl:consultarLoteRequest" />
+      <wsdl:output name="consultarLoteResponse" message="impl:consultarLoteResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="consultarNota" parameterOrder="mensagemXml">
+      <wsdl:input name="consultarNotaRequest" message="impl:consultarNotaRequest" />
+      <wsdl:output name="consultarNotaResponse" message="impl:consultarNotaResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="cancelar" parameterOrder="mensagemXml">
+      <wsdl:input name="cancelarRequest" message="impl:cancelarRequest" />
+      <wsdl:output name="cancelarResponse" message="impl:cancelarResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="consultarNFSeRps" parameterOrder="mensagemXml">
+      <wsdl:input name="consultarNFSeRpsRequest" message="impl:consultarNFSeRpsRequest" />
+      <wsdl:output name="consultarNFSeRpsResponse" message="impl:consultarNFSeRpsResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="LoteRpsSoapBinding" type="impl:LoteRps">
+    <wsdlsoap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <wsdl:operation name="consultarSequencialRps">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="consultarSequencialRpsRequest">
+        <wsdlsoap:body use="encoded" namespace="http://wsnfe2.dsfnet.com.br" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="consultarSequencialRpsResponse">
+        <wsdlsoap:body use="encoded" namespace="http://200.201.194.78/WsNFe2/LoteRps.jws" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="enviar">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="enviarRequest">
+        <wsdlsoap:body use="encoded" namespace="http://wsnfe2.dsfnet.com.br" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="enviarResponse">
+        <wsdlsoap:body use="encoded" namespace="http://200.201.194.78/WsNFe2/LoteRps.jws" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarLote">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="consultarLoteRequest">
+        <wsdlsoap:body use="encoded" namespace="http://wsnfe2.dsfnet.com.br" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="consultarLoteResponse">
+        <wsdlsoap:body use="encoded" namespace="http://200.201.194.78/WsNFe2/LoteRps.jws" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarNota">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="consultarNotaRequest">
+        <wsdlsoap:body use="encoded" namespace="http://wsnfe2.dsfnet.com.br" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="consultarNotaResponse">
+        <wsdlsoap:body use="encoded" namespace="http://200.201.194.78/WsNFe2/LoteRps.jws" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cancelar">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="cancelarRequest">
+        <wsdlsoap:body use="encoded" namespace="http://wsnfe2.dsfnet.com.br" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="cancelarResponse">
+        <wsdlsoap:body use="encoded" namespace="http://200.201.194.78/WsNFe2/LoteRps.jws" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarNFSeRps">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="consultarNFSeRpsRequest">
+        <wsdlsoap:body use="encoded" namespace="http://wsnfe2.dsfnet.com.br" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="consultarNFSeRpsResponse">
+        <wsdlsoap:body use="encoded" namespace="http://200.201.194.78/WsNFe2/LoteRps.jws" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="LoteRpsService">
+    <wsdl:port name="LoteRps" binding="impl:LoteRpsSoapBinding">
+      <wsdlsoap:address location="http://200.201.194.78/WsNFe2/LoteRps.jws" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
